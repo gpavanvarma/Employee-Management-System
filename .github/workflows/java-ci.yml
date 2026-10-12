@@ -21,8 +21,13 @@ jobs:
           java-version: '17'
           cache: maven
 
+      - name: Set up Maven
+        uses: stCarolas/setup-maven@v5
+        with:
+          maven-version: '3.9.9'
+
       - name: Build WAR
-        run: chmod +x mvnw && ./mvnw --batch-mode clean package
+        run: mvn --batch-mode clean package
 
       - name: Upload WAR artifact
         uses: actions/upload-artifact@v4
