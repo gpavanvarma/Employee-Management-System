@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Management System</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="Main.css">
+</head>
+
+<body>
+
+<!-- Header -->
+<header class="header">
+    <div class="header-content">
+        <h1>Employee Management System</h1>
+        <p>Manage employee information easily and efficiently</p>
+    </div>
+</header>
+
+<!-- Main Container -->
+<main class="container">
+
+    <!-- Employee Form Card -->
+    <section class="card employee-card">
+
+        <div class="card-header">
+            <h2>Employee Details</h2>
+            <p>Enter employee information below</p>
+        </div>
+
+        <form action="EmplyeeUPT" method="post">
+
+            <div class="form-grid">
+
+                <!-- Employee ID -->
+                <div class="form-group">
+                    <label for="epid">Employee ID</label>
+                    <input
+                            type="text"
+                            id="epid"
+                            name="id"
+                            placeholder="Enter employee ID"
+                            required
+                            autocomplete="off"
+                    >
+                </div>
+
+                <!-- Employee Name -->
+                <div class="form-group">
+                    <label for="epname">Employee Name</label>
+                    <input
+                            type="text"
+                            id="epname"
+                            name="name"
+                            placeholder="Enter full name"
+                            required
+                            autocomplete="off"
+                    >
+                </div>
+
+                <!-- Salary -->
+                <div class="form-group">
+                    <label for="epsalary">Employee Salary</label>
+                    <input
+                            type="number"
+                            id="epsalary"
+                            name="salary"
+                            placeholder="Example: 25000"
+                            step="0.01"
+                            autocomplete="off"
+                    >
+                </div>
+
+                <!-- Department -->
+                <div class="form-group">
+                    <label for="epdepartment">Department</label>
+                    <input
+                            type="text"
+                            id="epdepartment"
+                            name="department"
+                            placeholder="Example: IT, HR, Finance"
+                            autocomplete="off"
+                    >
+                </div>
+
+                <!-- Email -->
+                <div class="form-group full-width">
+                    <label for="epemail">Employee Email</label>
+                    <input
+                            type="email"
+                            id="epemail"
+                            name="email"
+                            placeholder="employee@example.com"
+                            autocomplete="off"
+                            required
+                    >
+                </div>
+
+            </div>
+
+            <!-- Buttons -->
+            <div class="button-group">
+
+                <button type="submit" name="action" value="add" class="btn btn-add">
+                    Add Employee
+                </button>
+
+                <button type="submit" name="action" value="update" class="btn btn-update">
+                    Update Employee
+                </button>
+
+            </div>
+
+        </form>
+    </section>
+
+
+    <!-- Employee Operations -->
+    <section class="card operations-card">
+
+        <div class="card-header">
+            <h2>Employee Operations</h2>
+            <p>Select an operation to manage employees</p>
+        </div>
+
+        <div class="operation-grid">
+
+            <!-- View All -->
+            <form action="allemp" method="post">
+                <button
+                        type="submit"
+                        name="action"
+                        value="allemp"
+                        class="operation-btn view-all"
+                >
+                    <span class="icon">📋</span>
+                    <span>
+                            <strong>View All</strong>
+                            <small>View all employees</small>
+                        </span>
+                </button>
+            </form>
+
+
+            <!-- View By ID -->
+            <form action="search" method="post">
+                <input
+                        type="number"
+                        name="id"
+                        placeholder="Employee ID"
+                        class="operation-input"
+                        required
+                >
+
+                <button
+                        type="submit"
+                        name="action"
+                        value="search"
+                        class="operation-btn view-id"
+                >
+                    <span class="icon">🔍</span>
+                    <span>
+                            <strong>View By ID</strong>
+                            <small>Find employee by ID</small>
+                        </span>
+                </button>
+            </form>
+
+
+            <!-- Delete By ID -->
+            <form action="delete" method="post">
+                <input
+                        type="text"
+                        name="id"
+                        placeholder="Employee ID"
+                        class="operation-input"
+                        required
+                >
+
+                <button
+                        type="submit"
+                        name="action"
+                        value="delete"
+                        class="operation-btn delete"
+                >
+                    <span class="icon">🗑️</span>
+                    <span>
+                            <strong>Delete By ID</strong>
+                            <small>Remove an employee</small>
+                        </span>
+                </button>
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Employee Management System</p>
+    </footer>
+
+</main>
+
+</body>
+</html>

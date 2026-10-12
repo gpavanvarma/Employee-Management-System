@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Result</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #b1c7f6;
+    }
+    tr:nth-child(even) {
+      background-color: #dbfbb9;
+    }
+    button {
+      border: none;
+      cursor: pointer;
+      display: block;
+      margin: 20px auto 0;
+      border-radius: 5px;
+      background-color: #3fe88a;
+      padding: 5px 10px;
+
+    }
+    button:hover {
+      background-color: #5b8e52;
+    }
+    a{
+      text-decoration: none;
+      text-align: center;
+      color: #000000;
+      font-weight: bold;
+      font-size: 16px;
+      font-family: "Segoe UI", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+  </style>
+</head>
+<body>
+<section>
+  <div>
+    <table>
+      <tr>
+        <th>Employee ID</th>
+        <th>Employee Name</th>
+        <th>Salary</th>
+        <th>Department</th>
+        <th>Email</th>
+      </tr>
+      <tr>
+        <td>${id}</td>
+        <td>${name}</td>
+        <td>${salary}</td>
+        <td>${department}</td>
+        <td>${email}</td>
+      </tr>
+    </table>
+  </div>
+  <div>
+    <button><a href="Main.html">Home</a></button>
+  </div>
+</section>
+
+</body>
+</html>
